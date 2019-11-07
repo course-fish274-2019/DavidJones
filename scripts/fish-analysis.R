@@ -12,3 +12,10 @@ library(dplyr)
 fish_data_cat = fish_data %>%
   mutate(length_cat = ifelse(length > 300, "big", "small"))
 fish_data_cat
+
+# The line below will only show fish with a scale length greater than 1 mm
+
+fish_data_cat_scalelength <- filter(fish_data_cat, scalelength  > 1)
+fish_data_cat_scalelength
+
+
