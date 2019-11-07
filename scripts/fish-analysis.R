@@ -1,6 +1,6 @@
 # First commits
 
-fish_data = read.csv("raw_data/Gaeta_etal_CLC_data.csv")
+fish_data = read.csv("raw_data/Gaeta_etal_CLC_data_1.csv")
 fish_data
 
 # Building a history
@@ -18,4 +18,10 @@ fish_data_cat
 fish_data_cat_scalelength <- filter(fish_data_cat, scalelength  > 1)
 fish_data_cat_scalelength
 
+# The lines below create a scatterplot of fish length vs scale length
 
+library(ggplot2)
+
+ggplot(fish_data_cat_scalelength, aes(x = length, y = scalelength, color = lakeid)) +
+  geom_point(size=1)
+  
