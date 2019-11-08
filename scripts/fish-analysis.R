@@ -28,6 +28,11 @@ ggplot(fish_data_cat_scalelength, aes(x = length, y = scalelength, color = lakei
 
 
 # try this
-ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
-  geom_histogram()
+# Setting bins arguement to 80
 
+ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
+  geom_histogram(bins = 80) 
+
+# saving with ggsave
+
+ggsave("figures/scale_hist_by_length.jpg")
