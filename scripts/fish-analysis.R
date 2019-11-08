@@ -25,3 +25,9 @@ library(ggplot2)
 ggplot(fish_data_cat_scalelength, aes(x = length, y = scalelength, color = lakeid)) +
   geom_point(size=1)
   
+
+
+# try this
+ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
+  geom_histogram()
+
